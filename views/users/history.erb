@@ -1,0 +1,5 @@
+<% current_user.judgements.each do |judgement| %>
+  <div>
+    <img class="<%= judgement.is_meow ? "is-meow": "not-meow" %>" src="<%= judgement.kitten.url %>" alt="" />
+  </div>
+  <% end %>
