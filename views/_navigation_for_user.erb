@@ -1,15 +1,32 @@
-<div>
-  <form action="/sessions" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Log-Out">
-  </form>
+<html lang="en">
+  <head>
+    <title>FOR USERS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Tinder for Kittens">
+    <meta name="author" content="Alice">
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.scss">
+  </head>
+  <body>
 
-  <form action="/judgements" method="get">
-    <input type="submit" value="Judge Time">
-  </form>
+    <div>
+      <form action="/sessions" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Log-Out">
+      </form>
 
-  <form action="/history" method="get">
-    <input type="submit" value="Reflect">
-  </form>
+      <form action="/judgements" method="get">
+        <input type="submit" value="Judge Time">
+      </form>
 
-</div>
+      <form action="/history" method="get">
+        <input type="submit" value="Reflect">
+      </form>
+
+    </div>
+  </body>
+</html>

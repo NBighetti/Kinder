@@ -1,19 +1,37 @@
-<h3>Welcome <%= current_user.username %></h3>
+<html lang="en">
+  <head>
+    <title>JUDGEMENT</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Tinder for Kittens">
+    <meta name="author" content="Alice">
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.scss">
+  </head>
+  <body>
 
-<h4>Is this kitten meow or not meow?</h4>
+    <div class="heyYou">Welcome <%= current_user.username %>!</div>
 
-<form action="/judgements" method="post">
-  <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-  <input type="hidden" name="not_meow" value=false>
-  <input type="submit" value="Not Meow">
-</form>
+    <h4>Is this kitten meow or not meow?</h4>
 
-<div class="sentencing-chair">
-  <img src="<%= @kitten.url %>" alt=""/>
-</div>
+    <form action="/judgements" method="post">
+      <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+      <input type="hidden" name="not_meow" value=false>
+      <input type="submit" value="Not Meow">
+    </form>
 
-<form action="/judgements" method="post">
-  <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-  <input type="hidden" name="is_meow" value=true>
-  <input type="submit" value="Meow!">
-</form>
+    <div class="sentencing-chair">
+      <img src="<%= @kitten.url %>" alt=""/>
+    </div>
+
+    <form action="/judgements" method="post">
+      <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+      <input type="hidden" name="is_meow" value=true>
+      <input type="submit" value="Meow!">
+    </form>
+
+  </body>
+</html>
