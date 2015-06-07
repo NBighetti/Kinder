@@ -11,27 +11,35 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.scss">
   </head>
-  <body>
+  <body class="responsive-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 center-form">
+          <h2>Welcome <%= current_user.username %>!</h2>
+          <h4>Is this kitten meow or not meow?</h4>
+          <img src="<%= @kitten.url %>" alt=""/>
+          <div class="vote-block">
+            <div class="vote-block-left">
+              <input type="hidden" name="not_meow" value=false>
+              <input type="submit" value="Not Meow">
+            </div>
+          </div>
+          <div class="vote-block-right">
+            <input type="hidden" name="is_meow" value=true>
+            <input type="submit" value="Meow!">
+          </div>
 
-    <div class="heyYou">Welcome <%= current_user.username %>!</div>
+          <form action="/judgements" method="post">
+            <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
 
-    <h4>Is this kitten meow or not meow?</h4>
+          </form>
 
-    <form action="/judgements" method="post">
-      <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-      <input type="hidden" name="not_meow" value=false>
-      <input type="submit" value="Not Meow">
-    </form>
+          <form action="/judgements" method="post">
+            <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+                      </form>
 
-    <div class="sentencing-chair">
-      <img src="<%= @kitten.url %>" alt=""/>
-    </div>
-
-    <form action="/judgements" method="post">
-      <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-      <input type="hidden" name="is_meow" value=true>
-      <input type="submit" value="Meow!">
-    </form>
-
+          </div>
+        </div>
+      </div>
   </body>
 </html>

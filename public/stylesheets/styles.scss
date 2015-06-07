@@ -13,9 +13,34 @@ body{
   opacity: 0.5;
 }
 
-#loginBody{
-  background-image: url('public/images/blueyarnball.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.responsive-background {
+   background: url(/images/blueyarn.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+
+.center-form{
+  margin: auto;
+  text-align: center;
+}
+
+.vote-block {
+  position: relative;
+}
+
+.vote-block-left {
+  display: block;
+  float: left;
+  margin: inherit;
+  text-align: right;
+}
+
+.vote-block-right {
+ display: block;
+ float: right;
+ margin:inherit;
+ text-align: left;
 }
