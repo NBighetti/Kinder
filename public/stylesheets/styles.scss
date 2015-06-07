@@ -13,6 +13,14 @@ body{
   opacity: 0.5;
 }
 
+.responsive-background-homepage {
+   background: url(/images/19595.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
 .responsive-background {
    background: url(/images/blueyarn.jpg) no-repeat center center fixed;
    -webkit-background-size: cover;
@@ -20,7 +28,6 @@ body{
    -o-background-size: cover;
    background-size: cover;
 }
-
 
 .center-form{
   margin: auto;
@@ -43,4 +50,20 @@ body{
  float: right;
  margin:inherit;
  text-align: left;
+}
+
+.submit-YES-button-img{
+  background: url(/images/YES/yes.png);
+  border: 0;
+  display: block;
+  height: 258px;
+  width: 257px;
+}
+
+.submit-NO-button-img{
+  background: url(/images/NO/no.png);
+  border: 0;
+  display: block;
+  height: 258px;
+  width: 257px;
 }
