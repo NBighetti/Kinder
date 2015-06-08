@@ -15,15 +15,14 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
-          <div class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><%= current_user.username %></a></div>
+          <div class="navbar-text navbar-right">Signed in as <%= current_user.username %></div>
 
-          <div class="judgelogout">
+          <span class="pull-right">
             <form action="/sessions" method="post">
               <input type="hidden" name="_method" value="delete">
               <input type="submit" value="Log-Out">
             </form>
-
-          </div>
+          </span>
       </div>
     </div>
   </nav>
@@ -38,33 +37,38 @@
           <h4>Is this kitten meow or not meow?</h4>
           <img src="<%= @kitten.url %>" alt=""/>
 
-          <div class="vote-block">
-            <div class="vote-block-left">
+          <div class="row vote-buttons">
 
+          <div class="vote-block vote-angie">
+            <div class="vote-block-left">
               <form action="/judgements" method="post">
                 <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
                 <input type="hidden" name="not_meow" value=false>
-                <input type="submit" class="submit-NO-button-img"="submit" value="Not Meow">
+                <input type="submit" class="vote-button submit-NO-button-img" value="Not Meow">
               </form>
-
             </div>
           </div>
 
-          <div class="vote-block-right">
-            <form action="/judgements" method="post">
-              <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-              <input type="hidden" name="is_meow" value=true>
-              <input type="submit" class="submit-YES-button-img"="submit" value="Meow!">
-            </form>
+          <div class="vote-block vote-angie">
+            <div class="vote-block-right">
+              <form action="/judgements" method="post">
+                <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+                <input type="hidden" name="is_meow" value=true>
+                <input type="submit" class="vote-button submit-YES-button-img" value="Meow!">
+              </form>
+            </div>
           </div>
 
+        </div>
+
+        <!--  TODO: Display histroy of votes.
           <div class="judgehistory">
             <form action="/history" method="get">
               <input type="submit" value="History">
             </form>
-
-
           </div>
+           -->
+           
           </div>
         </div>
       </div>

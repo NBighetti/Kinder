@@ -15,22 +15,23 @@
   <body id="bodyIndex" class="responsive-background-homepage">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <div class="navbar-header">
+
           <a class="navbar-brand" href="#">
             <img src="/images/LOGO/kinder_logo.png" alt="Logo" style="border-style: none; height: 35px">
           </a>
 
-          <form action="/sessions" method="post">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <input type="submit" value="Login">
-          </form>
+          <span class="pull-right">
+            <form action="/sessions" method="post">
+              <input type="text" name="username" placeholder="username">
+              <input type="password" name="password" placeholder="password">
+              <input type="submit" value="Login">
+            </form>
 
-          <form action="/users/new" method="get">
-            <input type="submit" value="Sign-Up">
-          </form>
+            <form action="/users/new" method="get">
+              <input type="submit" value="Sign-Up">
+            </form>
+          </span>
 
-          </div>
         </div>
     </nav>
   </body>
