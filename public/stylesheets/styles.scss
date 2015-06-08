@@ -1,8 +1,13 @@
 body{
-  padding: 30px !important;
+  margin: 60px 0px 0px 10px !important;
 }
 .sentencing-chair{
   width: 15em;
+}
+
+img{
+  border-style: double;
+  border-width: thick;
 }
 
 .is-meow{
@@ -22,7 +27,7 @@ body{
 }
 
 .responsive-background {
-   background: url(/images/blueyarn.jpg) no-repeat center center fixed;
+   background: url('https://az523647.vo.msecnd.net/media/yarn/plymouth/plymouth-encore-dk/plymouth-encore-dk-0146-winter-white-800.jpg?_=8d150d670c4f510') no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;

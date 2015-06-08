@@ -33,7 +33,7 @@ post '/sessions' do
   redirect '/' unless user = User.find_by({username: params[:username]})
   if user.password == params[:password]
     session[:current_user] = user.id
-    redirect '/'
+    redirect '/judgements'
   else
     redirect '/'
   end
