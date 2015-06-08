@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <title>JUDGEMENT</title>
+    <title>Kinder</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,45 +11,60 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/styles.scss">
   </head>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <div class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link"><%= current_user.username %></a></div>
+
+          <div class="judgelogout">
+            <form action="/sessions" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <input type="submit" value="Log-Out">
+            </form>
+
+          </div>
+      </div>
+    </div>
+  </nav>
 
   <body class="responsive-background">
     <div class="container">
       <div class="row">
         <div class="col-md-12 center-form">
+
           <img src="/images/LOGO/kinder_logo.png" alt="Logo" style="border-style: none; height: 50px">
 
-          <form action="/judgements" method="post">
-          <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-          </form>
-
-          <h2>Welcome <%= current_user.username %>!</h2>
           <h4>Is this kitten meow or not meow?</h4>
           <img src="<%= @kitten.url %>" alt=""/>
+
           <div class="vote-block">
             <div class="vote-block-left">
 
-              <input type="hidden" name="not_meow" value=false>
-              <input type="submit" class="submit-NO-button-img"="submit" value="Not Meow">
+              <form action="/judgements" method="post">
+                <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+                <input type="hidden" name="not_meow" value=false>
+                <input type="submit" class="submit-NO-button-img"="submit" value="Not Meow">
+              </form>
+
             </div>
           </div>
+
           <div class="vote-block-right">
-            <input type="hidden" name="is_meow" value=true>
-            <input type="submit" class="submit-YES-button-img"="submit" value="Meow!">
+            <form action="/judgements" method="post">
+              <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
+              <input type="hidden" name="is_meow" value=true>
+              <input type="submit" class="submit-YES-button-img"="submit" value="Meow!">
+            </form>
           </div>
 
-          <form action="/judgements" method="post">
-            <input type="hidden" name="kitten_id" value="<%= @kitten.id %>">
-          </form>
+          <div class="judgehistory">
+            <form action="/history" method="get">
+              <input type="submit" value="History">
+            </form>
 
-          <form action="/history" method="get">
-            <input type="submit" value="History">
-          </form>
 
-          <form action="/sessions" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="Log-Out">
-          </form>
-
+          </div>
           </div>
         </div>
       </div>
