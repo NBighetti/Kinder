@@ -1,10 +1,10 @@
-body{
+body {
+  font-family: 'Raleway', sans-serif !important;
   margin: 10px 0px 0px 10px !important;
-  font-family: 'Raleway', sans-serif;
 }
-
 .navbar{
-  padding-top: 1em;
+  font-family: 'Raleway', sans-serif !important;
+  padding-top: 10px;
 }
 
 .sentencing-chair{
@@ -23,6 +23,7 @@ img{
 .not-meow{
   opacity: 0.5;
 }
+
 .body-content{
   margin-top: 8em;
 }
@@ -47,7 +48,6 @@ img{
    -o-background-size: cover;
    background-size: cover;
 }
-
 .center-form{
   margin: auto;
   text-align: center;
@@ -102,7 +102,6 @@ img{
   height: 258px;
   width: 257px;
 }
-
 
 .vote-button{
   width: 100px;

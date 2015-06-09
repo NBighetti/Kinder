@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Tinder for Kittens">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
     <meta name="author" content="Alice">
     <script src="javascripts/jquery.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
@@ -13,28 +14,21 @@
   </head>
 
   <body class="responsive-background">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-backgrnd">
       <div class="container-fluid">
-
           <a class="navbar-brand" href="#">
             <img src="/images/LOGO/kinder_logo.png" alt="Logo" style="border-style: none; height: 35px">
           </a>
 
           <span class="pull-right">
-
-
             Signed in as <%= current_user.username %>
-
-            <br>
+            <br><br>
 
             <form action="/sessions" method="post">
               <input type="hidden" name="_method" value="delete">
               <input type="submit" value="Log-Out">
             </form>
-
-            <br>
           </span>
-
         </div>
     </nav>
 
@@ -68,7 +62,6 @@
               </form>
             </div>
           </div>
-
         </div>
 
         <!--  TODO: Display histroy of votes.

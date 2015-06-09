@@ -3,6 +3,7 @@
         <title>Kinder</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' href="/stylesheets/styles.scss" type='text/css'>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Tinder for Kittens">
         <meta name="author" content="Alice">
@@ -11,23 +12,21 @@
         <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="/stylesheets/styles.scss">
       </head>
-  <body>
-    <body class="responsive-background-homepage">
+
+    <body id="newBody" class="responsive-background-homepage">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/images/LOGO/kinder_logo.png" alt="Logo" style="border-style: none; height: 35px">
             </a>
 
-    <h3>New User</h3>
-
     <span class="pull-right">
-    <form action="/users" method="post">
-      <input type="text" name="user[username]" placeholder="username">
-      <input type="password" name="password" placeholder= "password">
-      <input type="submit">
-    </form>
-  </span>
-
+      <form action="/users" method="post">
+        <input type="text" name="user[username]" placeholder="username">
+        <input type="password" name="password" placeholder= "password">
+        <input type="submit">
+      </form>
+    </span>
+    <h3 class="new-user">New User Registration</h3>
   </body>
 </html>
