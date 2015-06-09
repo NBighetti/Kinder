@@ -22,9 +22,7 @@
 
           <span class="pull-right">
             Signed in as <%= current_user.username %>
-            <br><br>
-
-            <form action="/sessions" method="post">
+            <form class="logOutBtn" action="/sessions" method="post">
               <input type="hidden" name="_method" value="delete">
               <input type="submit" value="Log-Out">
             </form>
