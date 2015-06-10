@@ -6,6 +6,8 @@ This application was built using Sinatra, ActiveRecord and postgresql for databa
 
 Version 2 will contain enhancements to show previous selections as well as responsive mobile capabilities allowing the user to swipe left or right for ease of decision making.
 
+Please visit: http://kinder-kittens.herokuapp.com/
+
 ![gif](/public/images/kindermainpage.png)
 
 ![gif](/public/images/kinderjudge.png)
